@@ -1,24 +1,38 @@
-import logo from "./logo.svg";
+import { DataView } from "components/DataView";
 import "./App.css";
+import styled from "@emotion/styled";
+import { useState } from "react";
+import { InputContainer } from "components/InputContainer";
+
+const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+`;
 
 function App() {
+  const [toDoList, setToDoList] = useState([
+    'TDOO 1',
+    'TDOO 2',
+    'TDOO 3'
+  ]);
+
+  const onDelete = (todo: string) => {
+    setToDoList(toDoList.filter((item) => item !== todo));
+  }
+
+  const onAdd = (toDo: string) => {
+    setToDoList([...toDoList, toDo]);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <DataView toDoList={ toDoList } onDelete={ onDelete } />
+      <InputContainer onAdd={ onAdd } />
+    </Container>
   );
 }
 
