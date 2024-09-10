@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { Title } from 'components/Title';
 import { ToDoList } from 'components/ToDoList';
-import { ShowInputButton } from '../ShowInputButton';
+import { ShowInputButton } from 'components/ShowInputButton';
 import { useNavigate } from 'react-router-dom';
 
 const Container = styled.div`

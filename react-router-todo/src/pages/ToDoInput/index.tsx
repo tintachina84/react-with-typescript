@@ -5,6 +5,7 @@ import { Title } from 'components/Title';
 import { ToDoListContext } from 'contexts/ToDoList';
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ShowInputButton } from '../../components/ShowInputButton';
 
 const Container = styled.div`
   position: absolute;
@@ -27,7 +28,7 @@ const Background = styled.div`
 `;
 
 const Contents = styled.div`
-  dlsplay: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -65,6 +66,7 @@ export const ToDoInput = () => {
           <TextInput value={toDo} onChange={setToDo} />
           <Button label="Add" color="#304ffe" onClick={onAddToDo} />
         </InputContainer>
+        <ShowInputButton show={true} onClick={() => navigate('/')} />
       </Contents>
     </Container>
   );

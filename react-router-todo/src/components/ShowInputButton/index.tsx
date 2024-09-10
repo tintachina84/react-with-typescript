@@ -1,5 +1,5 @@
-import styled from "@emotion/styled";
-import { Button } from "components/Button";
+import styled from '@emotion/styled';
+import { Button } from 'components/Button';
 
 const Container = styled.div`
   position: absolute;
@@ -9,18 +9,14 @@ const Container = styled.div`
 `;
 
 interface Props {
-    readonly show: boolean;
-    readonly onClick: () => void;
+  readonly show: boolean;
+  readonly onClick: () => void;
 }
 
 export const ShowInputButton = ({ show, onClick }: Props) => {
-    return (
-        <Container>
-            <Button
-                label={ show ? 'Close' : 'Add' }
-                color={ show ? undefined : '#304ffe' }
-                onClick={ onClick }
-            />
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Button label={show ? 'Close' : 'Add'} color={show ? undefined : '#304ffe'} onClick={onClick} />
+    </Container>
+  );
+};

@@ -1,4 +1,4 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 const Container = styled.div`
   display: flex;
@@ -11,13 +11,13 @@ const Label = styled.h1`
 `;
 
 interface Props {
-    readonly label: string;
+  readonly label: string;
 }
 
 export const Title = ({ label }: Props) => {
-    return (
-        <Container>
-            <Label>{ label }</Label>
-        </Container>
-    );
+  return (
+    <Container>
+      <Label>{label}</Label>
+    </Container>
+  );
 };
