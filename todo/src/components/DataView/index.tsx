@@ -17,11 +17,11 @@ interface Props {
     readonly onDelete?: (todo: string) => void;
 }
 
-export const DataView = ({ toDoList, onDelete }: Props) => {
+export const DataView = () => {
     return (
         <Container>
             <Title label="Todo list" />
-            <ToDoList toDoList={ toDoList } onDelete={ onDelete } />
+            <ToDoList />
         </Container>
     );
 }

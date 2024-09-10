@@ -1,4 +1,3 @@
-import styled from "@emotion/styled";
 import { ShowInputButton } from "components/ShowInputButton";
 import { ToDoInput } from "components/ToDoInput";
 import { useState } from "react";
@@ -7,17 +6,16 @@ interface Props {
     readonly onAdd: (toDo: string) => void;
 }
 
-export const InputContainer = ({ onAdd }: Props) => {
+export const InputContainer = () => {
     const [showToDoInput, setShowToDoInput] = useState(false);
 
-    const onAddTodo = (toDo: string) => {
-        onAdd(toDo);
+    const onClose = () => {
         setShowToDoInput(false);
-    }
+    };
 
     return (
         <>
-            { showToDoInput && <ToDoInput onAdd={ onAddTodo } />}
+            { showToDoInput && <ToDoInput onClose={ onClose } />}
             <ShowInputButton
                 show={ showToDoInput }
                 onClick={ () => setShowToDoInput(!showToDoInput) }
