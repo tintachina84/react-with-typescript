@@ -11,5 +11,5 @@ interface Props {
 }
 
 export const TextInput = ({ value, onChange }: Props) => {
-  return <Input value={value} onChange={(event) => onChange(event.target.value)} />;
+  return <Input value={value} onChange={event => onChange(event.target.value)} />;
 };

@@ -23,7 +23,7 @@ const ToDoListContextProvider = ({ children }: Props) => {
     setToDoList([...toDoList, toDo]);
   };
   const onDelete = (toDo: string) => {
-    setToDoList(toDoList.filter((todo) => todo !== toDo));
+    setToDoList(toDoList.filter(todo => todo !== toDo));
   };
 
   return <ToDoListContext.Provider value={{ toDoList, onAdd, onDelete }}>{children}</ToDoListContext.Provider>;

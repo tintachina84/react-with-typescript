@@ -7,13 +7,13 @@ interface ContainerProps {
 const Container = styled.button<ContainerProps>`
   border: 0;
   color: #ffffff;
-  background-color: ${(props) => props.color};
+  background-color: ${props => props.color};
   cursor: pointer;
   padding: 8px 16px;
   border-radius: 4px;
 
   &:hover {
-    background-color: ${(props) => props.color};
+    background-color: ${props => props.color};
     opacity: 0.8;
   }
 

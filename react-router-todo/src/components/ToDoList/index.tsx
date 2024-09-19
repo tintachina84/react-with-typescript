@@ -13,7 +13,7 @@ export const ToDoList = () => {
 
   return (
     <Container>
-      {toDoList.map((todo) => (
+      {toDoList.map(todo => (
         <ToDoItem
           key={todo}
           label={todo}
